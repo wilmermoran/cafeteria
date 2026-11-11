@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetería - Casa Abierta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <div class="logo">☕</div>
+        <h1>CAFETERÍA</h1>
+        <p>Un momento especial, un sabor único</p>
+    </header>
+
+    <main class="contenedor">
+
+     
+        <section id="pantallaInicio" class="pantalla activa">
+
+            <div class="icono-cafe">☕</div>
+
+            <h2>¡Bienvenido!</h2>
+
+            <p class="descripcion">
+                Para continuar, selecciona el rol que te corresponde.
+            </p>
+
+            <div class="roles">
+
+                <button class="rol" onclick="seleccionarRol('estudiantes')">
+                    🎓 <span>Estudiantes</span>
+                </button>
+
+                <button class="rol" onclick="seleccionarRol('docentes')">
+                    📚 <span>Docentes</span>
+                </button>
+
+                <button class="rol" onclick="seleccionarRol('directivos')">
+                    🏫 <span>Directivos</span>
+                </button>
+
+                <button class="rol" onclick="seleccionarRol('administrativos')">
+                    💼 <span>Administrativos</span>
+                </button>
+
+                <button class="rol" onclick="seleccionarRol('padres')">
+                    👨‍👩‍👧 <span>Padres de familia</span>
+                </button>
+
+            </div>
+        </section>
+
+
+        <section id="pantallaSeleccion" class="pantalla">
+
+            <button class="volver" onclick="volverInicio()">
+                ← Volver
+            </button>
+
+            <h2 id="tituloRol">Selecciona tu nombre</h2>
+
+            <p class="descripcion" id="textoRol">
+                Selecciona la opción correspondiente.
+            </p>
+
+          
+            <div id="opcionesEstudiantes" class="opciones oculto">
+
+                <label>Curso:</label>
+
+                <select id="curso">
+                    <option value="">Selecciona tu curso</option>
+                    <option value="1ro Bachillerato">1ro Bachillerato Informatica</option>
+                    <option value="1ro Bachillerato">1ro Bachillerato Contabilidad</option>
+                    <option value="1ro Bachillerato">1ro Bachillerato Ciencias</option>
+
+                    <option value="2do Bachillerato">2do Bachillerato Informatica</option>
+                    <option value="2do Bachillerato">2do Bachillerato Contabilidad</option>
+                    <option value="2do Bachillerato">2do Bachillerato Ciencias</option>
+
+                    <option value="3ro Bachillerato">3ro Bachillerato Informatica</option>
+                    <option value="3ro Bachillerato">3ro Bachillerato Contabilidad</option>
+                    <option value="3ro Bachillerato">3ro Bachillerato Ciencias A</option>
+                    <option value="3ro Bachillerato">3ro Bachillerato Ciencias B</option>
+
+                </select>
+
+                <label>Nombre del estudiante:</label>
+
+                <input type="text" id="nombreEstudiante"
+                       placeholder="Escribe tu nombre completo">
+
+            </div>
+
+
+            <div id="opcionesNombres" class="opciones oculto">
+
+                <label>Selecciona tu nombre:</label>
+
+                <select id="listaNombres">
+                    <option value="">Selecciona tu nombre</option>
+                </select>
+
+            </div>
+
+
+            <button class="boton-continuar" onclick="continuar()">
+                CONTINUAR →
+            </button>
+
+        </section>
+
+
+        <section id="pantallaFinal" class="pantalla">
+
+            <div class="icono-cafe">☕</div>
+
+            <h2>¡Bienvenido a nuestra cafetería!</h2>
+
+            <p id="mensajeFinal" class="descripcion"></p>
+
+            <button class="boton-continuar"
+                    onclick="volverInicio()">
+                VOLVER AL INICIO
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Cafetería | Casa Abierta</p>
+        <p>Un espacio para compartir y disfrutar ☕</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

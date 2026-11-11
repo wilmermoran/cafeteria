@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #071a30, #163d60);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #102b49;
+}
+
+
+
+.encabezado {
+    width: 100%;
+    background: #0b2239;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    border-bottom: 4px solid #f5c842;
+}
+
+.logo {
+    font-size: 40px;
+}
+
+.encabezado h1 {
+    color: #f5c842;
+    letter-spacing: 4px;
+    margin: 5px 0;
+}
+
+.encabezado p {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+
+
+.contenedor {
+    width: 90%;
+    max-width: 550px;
+    margin: 50px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+    text-align: center;
+}
+
+
+
+.pantalla {
+    display: none;
+    animation: aparecer 0.5s ease;
+}
+
+.pantalla.activa {
+    display: block;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.icono-cafe {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #102b49;
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.descripcion {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+
+
+.roles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.rol {
+    background: #102b49;
+    color: white;
+    border: 2px solid #102b49;
+    padding: 18px 10px;
+    border-radius: 12px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.rol span {
+    display: block;
+    font-size: 14px;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.rol:hover {
+    background: #f5c842;
+    color: #102b49;
+    border-color: #f5c842;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px #0003;
+}
+
+.rol:last-child {
+    grid-column: span 2;
+}
+
+
+
+.opciones {
+    text-align: left;
+    margin: 25px 0;
+}
+
+.opciones label {
+    display: block;
+    font-weight: bold;
+    margin: 15px 0 8px;
+    color: #102b49;
+}
+
+select,
+input {
+    width: 100%;
+    padding: 13px;
+    border: 2px solid #d6dce2;
+    border-radius: 9px;
+    font-size: 15px;
+    outline: none;
+    background: white;
+}
+
+select:focus,
+input:focus {
+    border-color: #e7b92e;
+    box-shadow: 0 0 5px #f5c842;
+}
+
+.oculto {
+    display: none;
+}
+
+
+
+.boton-continuar {
+    width: 100%;
+    padding: 15px;
+    background: #f5c842;
+    color: #102b49;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.boton-continuar:hover {
+    background: #102b49;
+    color: white;
+    transform: scale(1.03);
+}
+
+.volver {
+    display: block;
+    background: transparent;
+    border: none;
+    color: #102b49;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+.volver:hover {
+    color: #d5a900;
+}
+
+
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 13px;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+
+@media (max-width: 450px) {
+
+    .contenedor {
+        padding: 25px 18px;
+        margin: 30px auto;
+    }
+
+    .roles {
+        grid-template-columns: 1fr;
+    }
+
+    .rol:last-child {
+        grid-column: span 1;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+}
